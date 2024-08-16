@@ -1,0 +1,8 @@
+@import "../_elements/index",
+"nav";
+
+.element_mobile {
+    @include desktop {
+        display: none;
+    }
+}

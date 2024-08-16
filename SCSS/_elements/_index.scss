@@ -1,0 +1,14 @@
+@import "../_defs/index",
+"icons",
+"buttons";
+
+$border: 1px solid $black;
+$transition: all 0.3s;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

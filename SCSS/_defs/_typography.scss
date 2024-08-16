@@ -1,0 +1,116 @@
+.text-heading1 {
+    @include semibold;
+    font-size: 4rem;
+    line-height: 120%;
+
+    @include tablet {
+        font-size: 6.7rem;
+    }
+}
+
+.text-heading2 {
+    @include semibold;
+    font-size: 3.4rem;
+    line-height: 120%;
+
+    @include tablet {
+        font-size: 5rem;
+    }
+}
+
+.text-heading3 {
+    @include medium;
+    font-size: 2.6rem;
+    line-height: 120%;
+
+    @include tablet {
+        font-size: 3.8rem;
+    }
+}
+
+.text-heading4 {
+    @include medium;
+    font-size: 2.2rem;
+    line-height: 120%;
+
+    @include tablet {
+        font-size: 2.8rem;
+    }
+}
+
+.text-heading5 {
+    @include medium;
+    font-size: 1.8rem;
+    line-height: 120%;
+
+    @include tablet {
+        font-size: 2.1rem;
+    }
+}
+
+.text-heading6 {
+    @include medium;
+    font-size: 1.6rem;
+    line-height: 100%;
+
+    @include tablet {
+        line-height: 120%;
+    }
+}
+
+.text-subtitle {
+    @include medium;
+    font-size: 1.8rem;
+    line-height: 140%;
+}
+
+.text-body {
+    @include regular;
+    font-size: 1.6rem;
+    line-height: 140%;
+}
+
+.text-button {
+    @include medium;
+    font-size: 1.4rem;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @include tablet {
+        font-size: 1.6rem;
+        line-height: 120%;
+    }
+}
+
+.text-link {
+    @include medium;
+    font-size: 1.4rem;
+    line-height: 120%;
+
+    @include tablet {
+        font-size: 1.6rem;
+    }
+}
+
+.text-overline {
+    @include medium;
+    font-size: 1.2rem;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    @include tablet {
+        font-size: 1.4rem;
+    }
+}
+
+.text-caption {
+    @include regular;
+    font-size: 1.4rem;
+    line-height: 120%;
+}
+
+.text-caption_small {
+    @include regular;
+    font-size: 1.2rem;
+    line-height: 120%;
+}

@@ -1,0 +1,11 @@
+.button {
+    @include medium;
+    font-size: 1.4rem;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @include tablet {
+        font-size: 1.6rem;
+        line-height: 120%;
+    }
+}

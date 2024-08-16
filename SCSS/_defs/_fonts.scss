@@ -1,0 +1,30 @@
+@font-face {
+    src: url(/assets/fonts/Gilroy-Regular.ttf);
+    font-family: "Gilroy";
+    
+}
+
+@font-face {
+    src: url(/assets/fonts/Gilroy-Medium.ttf);
+    font-family: "Gilroy";
+}
+
+@font-face {
+    src: url(/assets/fonts/gilroy-semibold.ttf);
+    font-family: "Gilroy";
+}
+
+@mixin regular {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400;
+}
+
+@mixin medium {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 500;
+}
+
+@mixin semibold {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 600;
+}
