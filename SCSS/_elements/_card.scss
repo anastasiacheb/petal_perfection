@@ -1,0 +1,28 @@
+.card {
+    height: 50vw;
+    border-left: $border;
+    border-bottom: $border;
+
+    @include desktop {
+        height: calc((100vh - 70px)/2);
+        width: 25vw;
+    }
+
+    &-category {
+        padding: 1.2rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
+        @include tablet {
+            padding: 2.4rem;
+        }
+
+        &__title {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+}

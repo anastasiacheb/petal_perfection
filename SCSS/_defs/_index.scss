@@ -3,3 +3,11 @@
 @import "colors";
 @import "fonts";
 @import "typography";
+
+$border: 1px solid $black;
+$transition: all 0.3s;
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

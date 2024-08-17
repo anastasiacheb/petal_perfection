@@ -1,0 +1,7 @@
+.section {
+    padding: 4rem 1.6rem;
+
+    @include tablet {
+        padding: 8rem;
+    }
+}

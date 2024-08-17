@@ -1,0 +1,91 @@
+.header {
+
+    border-right: $border;
+    margin-top: 5rem;
+    position: relative;
+
+    @include tablet {
+        margin-top: 5.8rem;
+    }
+
+    @include desktop {
+        @include grid;
+        margin-top: 7rem;
+    }
+
+    &__head {
+        border-bottom: $border;
+        border-left: $border;
+
+        @include desktop {
+            position: sticky;
+        top: 7rem;
+        height: calc(100vh - 7rem);
+        align-self: start;
+        }
+    }
+
+    &__title {
+        border-bottom: $border;
+        padding-bottom: 2.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+
+        h1 {
+            width: min-content;
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 140%;
+
+            @include tablet {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 1.6rem;
+
+        @include tablet {
+            padding-top: 2.4em;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 120%;
+            padding-left: 1.6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            @include tablet {
+                font-size: 1.4rem;
+                padding-left: 2.4em;
+            }
+
+        }
+    }
+
+    &__image {
+        border-right: $border;
+        padding-right: 1.6rem;
+        height: calc(50vw - 1.6rem);
+
+        @include tablet {
+            height: calc(50vw - 10.4rem);
+        }
+
+        @include desktop {
+            height: calc(25vw - 10.4rem);
+        }
+    }
+
+    &__categories {
+        @include grid;
+    }
+}

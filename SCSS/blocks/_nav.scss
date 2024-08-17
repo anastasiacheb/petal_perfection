@@ -1,5 +1,10 @@
 .nav {
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: $white;
+
 
     @include desktop {
         display: flex;
@@ -36,11 +41,11 @@
 
      &__cart {
         font-size: 1.6rem;
-            @include medium;
-            line-height: 120%;
+        @include medium;
+        line-height: 120%;
 
             @include desktop {
-                width: 12.5vw;
+                width: 12.55vw;
                 border-left: none;
 
                 &::after {

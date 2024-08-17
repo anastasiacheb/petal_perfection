@@ -1,3 +1,7 @@
+p {
+    @include regular;
+}
+
 .text-heading1 {
     @include semibold;
     font-size: 4rem;

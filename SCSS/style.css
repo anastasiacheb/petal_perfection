@@ -13,6 +13,7 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  display: inline-block;
 }
 
 ul {
@@ -37,15 +38,23 @@ button {
 @font-face {
   src: url(/assets/fonts/Gilroy-Regular.ttf);
   font-family: "Gilroy";
+  font-weight: 400;
 }
 @font-face {
   src: url(/assets/fonts/Gilroy-Medium.ttf);
   font-family: "Gilroy";
+  font-weight: 500;
 }
 @font-face {
   src: url(/assets/fonts/gilroy-semibold.ttf);
   font-family: "Gilroy";
+  font-weight: 600;
 }
+p {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+}
+
 .text-heading1 {
   font-family: "Gilroy", sans-serif;
   font-weight: 600;
@@ -204,8 +213,83 @@ button {
   }
 }
 
-.nav {
+.link {
+  transition: all 0.3s;
+  border-bottom: 1px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 0.4rem;
+}
+.link span {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 120%;
+}
+.link:active {
+  border-bottom: 1px solid #121212;
+}
+.link:disabled {
+  color: #D2D2D7;
+}
+@media screen and (min-width: 768px) {
+  .link {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .link:hover {
+    color: #808080;
+    border-bottom: 1px solid #121212;
+  }
+}
+
+.section {
+  padding: 4rem 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 8rem;
+  }
+}
+
+.card {
+  height: 50vw;
+  border-left: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+}
+@media screen and (min-width: 900px) {
+  .card {
+    height: calc((100vh - 70px) / 2);
+    width: 25vw;
+  }
+}
+.card-category {
+  padding: 1.2rem;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+@media screen and (min-width: 768px) {
+  .card-category {
+    padding: 2.4rem;
+  }
+}
+.card-category__title {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #FFFFFF;
 }
 @media screen and (min-width: 900px) {
   .nav {
@@ -247,7 +331,7 @@ button {
 }
 @media screen and (min-width: 900px) {
   .nav__cart {
-    width: 12.5vw;
+    width: 12.55vw;
     border-left: none;
   }
   .nav__cart::after {
@@ -337,6 +421,99 @@ button {
 .nav__icons {
   display: flex;
   justify-content: space-between;
+}
+
+.header {
+  border-right: 1px solid #121212;
+  margin-top: 5rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    margin-top: 5.8rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 7rem;
+  }
+}
+.header__head {
+  border-bottom: 1px solid #121212;
+  border-left: 1px solid #121212;
+}
+@media screen and (min-width: 900px) {
+  .header__head {
+    position: sticky;
+    top: 7rem;
+    height: calc(100vh - 7rem);
+    align-self: start;
+  }
+}
+.header__title {
+  border-bottom: 1px solid #121212;
+  padding-bottom: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.header__title h1 {
+  width: -moz-min-content;
+  width: min-content;
+}
+.header__title p {
+  font-size: 1.4rem;
+  line-height: 140%;
+}
+@media screen and (min-width: 768px) {
+  .header__title p {
+    font-size: 1.8rem;
+  }
+}
+.header__hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .header__hero {
+    padding-top: 2.4em;
+  }
+}
+.header__hero p {
+  font-size: 1.1rem;
+  line-height: 120%;
+  padding-left: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+@media screen and (min-width: 768px) {
+  .header__hero p {
+    font-size: 1.4rem;
+    padding-left: 2.4em;
+  }
+}
+.header__image {
+  border-right: 1px solid #121212;
+  padding-right: 1.6rem;
+  height: calc(50vw - 1.6rem);
+}
+@media screen and (min-width: 768px) {
+  .header__image {
+    height: calc(50vw - 10.4rem);
+  }
+}
+@media screen and (min-width: 900px) {
+  .header__image {
+    height: calc(25vw - 10.4rem);
+  }
+}
+.header__categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 @media screen and (min-width: 900px) {
