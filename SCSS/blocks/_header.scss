@@ -1,6 +1,6 @@
 .header {
 
-    border-right: $border;
+    //border-right: $border;
     margin-top: 5rem;
     position: relative;
 
@@ -9,20 +9,12 @@
     }
 
     @include desktop {
-        @include grid;
-        margin-top: 7rem;
+        margin-top: 6.92rem;
     }
 
     &__head {
         border-bottom: $border;
         border-left: $border;
-
-        @include desktop {
-            position: sticky;
-        top: 7rem;
-        height: calc(100vh - 7rem);
-        align-self: start;
-        }
     }
 
     &__title {
@@ -83,9 +75,5 @@
         @include desktop {
             height: calc(25vw - 10.4rem);
         }
-    }
-
-    &__categories {
-        @include grid;
     }
 }

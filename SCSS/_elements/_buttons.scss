@@ -4,10 +4,23 @@
     font-size: 1.4rem;
     line-height: 100%;
     text-transform: uppercase;
+    padding: 1.6rem 2.4rem 1.4rem 2.4rem;
+    min-width: 17.5rem;
+    border: $border;
+    transition: $transition;
 
     @include tablet {
         font-size: 1.6rem;
         line-height: 120%;
+    }
+
+    &_secondary {
+        background: $white;
+
+        &:hover {
+            background: $black;
+            color: $white;
+        }
     }
 }
 

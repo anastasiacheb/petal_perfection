@@ -45,7 +45,7 @@
         line-height: 120%;
 
             @include desktop {
-                width: 12.55vw;
+                width: 12.39vw;
                 border-left: none;
 
                 &::after {
@@ -87,14 +87,21 @@
         top: 0;
         width: 100%;
         height: 100vh;
-        backdrop-filter: blur(1px);
+        backdrop-filter: blur(2px);
+        left: 0;
         opacity: 1;
-        z-index: 1;
-        transition: $transition;
+        transition: opacity 0.3s,
+        left 0s;
 
         &.invisible {
             opacity: 0;
-            z-index: -1;
+            left: -100%;
+            transition: opacity 0.3s,
+            left 0s 0.3s;
+        }
+
+        @include desktop {
+            display: none;
         }
      }
 
@@ -113,7 +120,7 @@
             font-size: 1.6rem;
             @include medium;
             line-height: 120%;
-            width: 12.5vw;
+            width: 12.38vw;
             @include center;
             border-right: $border;
             border-bottom: none;
