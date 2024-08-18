@@ -14,12 +14,44 @@
         line-height: 120%;
     }
 
+    &_primary {
+        background: $black;
+        color: $white;
+
+        @include desktop {
+            &:hover {
+                background: $darkGray;
+                border: 1px solid $darkGray;
+            }
+        }
+    }
+
     &_secondary {
         background: $white;
+        color: $black;
 
-        &:hover {
-            background: $black;
-            color: $white;
+        @include desktop {
+            &:hover {
+                background: $black;
+                color: $white;
+            }
+        }
+    }
+
+    &_tertiary {
+        color: $white;
+        border: 1px solid $white;
+
+        @include desktop {
+            &:hover {
+                background: $white;
+                color: $black;
+            }
+        }
+
+        &:active {
+            background: $white;
+            color: $black;
         }
     }
 }
@@ -37,10 +69,6 @@
         font-size: 1.4rem;
         line-height: 120%;
     }
-    
-    &:active {
-        border-bottom: $border;
-    }
 
     &:disabled {
         color: $lightGray;
@@ -57,5 +85,29 @@
         }
     }
 
+    &:active {
+        border-bottom: $border;
+    }
+
     
+}
+
+.tag {
+    transition: $transition;
+    border-bottom: 1px solid $white;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 0.4rem;
+
+    span {
+        @include semibold;
+        font-size: 1.4rem;
+        line-height: 120%;
+    }
+
+    @include tablet {
+        font-size: 1.6rem;
+    }
+
 }

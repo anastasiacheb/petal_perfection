@@ -10,4 +10,11 @@ $transition: all 0.3s;
 @mixin grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

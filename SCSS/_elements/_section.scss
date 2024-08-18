@@ -39,6 +39,22 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    &_double-tab {
+
+        @include tablet {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__title {
+        padding: 1.6rem;  
+
+        @include tablet {
+            @include center;
+        }
+    }
+
     &__subheader {
         margin-bottom: 2.4rem;
     }

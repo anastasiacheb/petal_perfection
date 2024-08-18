@@ -25,4 +25,34 @@
             transform: translate(0, -50%);
         }
     }
+
+    &_center {        
+
+        @include tablet {
+            @include center;
+            flex-direction: column;
+            height: 40vw;
+        }
+
+        @include desktop {
+            height: 20vw;
+        }
+    }
+}
+
+.element {
+    border-left: $border;
+    border-bottom: $border;
+}
+
+.image {
+    height: 107vw;
+
+    @include tablet {
+        height: 65vw;
+    }
+
+    @include desktop {
+        height: 50vw;
+    }
 }

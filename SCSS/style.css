@@ -199,6 +199,11 @@ p {
   height: 2.4rem;
 }
 
+.icons {
+  display: flex;
+  gap: 3.2rem;
+}
+
 .button {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
@@ -216,12 +221,39 @@ p {
     line-height: 120%;
   }
 }
-.button_secondary {
-  background: #FFFFFF;
-}
-.button_secondary:hover {
+.button_primary {
   background: #121212;
   color: #FFFFFF;
+}
+@media screen and (min-width: 900px) {
+  .button_primary:hover {
+    background: #424245;
+    border: 1px solid #424245;
+  }
+}
+.button_secondary {
+  background: #FFFFFF;
+  color: #121212;
+}
+@media screen and (min-width: 900px) {
+  .button_secondary:hover {
+    background: #121212;
+    color: #FFFFFF;
+  }
+}
+.button_tertiary {
+  color: #FFFFFF;
+  border: 1px solid #FFFFFF;
+}
+@media screen and (min-width: 900px) {
+  .button_tertiary:hover {
+    background: #FFFFFF;
+    color: #121212;
+  }
+}
+.button_tertiary:active {
+  background: #FFFFFF;
+  color: #121212;
 }
 
 .link {
@@ -239,9 +271,6 @@ p {
   font-size: 1.4rem;
   line-height: 120%;
 }
-.link:active {
-  border-bottom: 1px solid #121212;
-}
 .link:disabled {
   color: #D2D2D7;
 }
@@ -254,6 +283,30 @@ p {
   .link:hover {
     color: #808080;
     border-bottom: 1px solid #121212;
+  }
+}
+.link:active {
+  border-bottom: 1px solid #121212;
+}
+
+.tag {
+  transition: all 0.3s;
+  border-bottom: 1px solid #FFFFFF;
+  display: flex;
+  align-items: center;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 0.4rem;
+}
+.tag span {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 120%;
+}
+@media screen and (min-width: 768px) {
+  .tag {
+    font-size: 1.6rem;
   }
 }
 
@@ -287,6 +340,22 @@ p {
 .section_double-mob {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@media screen and (min-width: 768px) {
+  .section_double-tab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.section__title {
+  padding: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .section__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .section__subheader {
   margin-bottom: 2.4rem;
@@ -324,6 +393,106 @@ p {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
+}
+@media screen and (min-width: 768px) {
+  .card_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  .card_center {
+    height: 20vw;
+  }
+}
+
+.element {
+  border-left: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+}
+
+.image {
+  height: 107vw;
+}
+@media screen and (min-width: 768px) {
+  .image {
+    height: 65vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  .image {
+    height: 50vw;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000000s ease-in-out 0s;
+  transition: background-color 5000000s ease-in-out 0s;
+}
+
+.input {
+  border: 1px solid #D2D2D7;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 120%;
+  color: #121212;
+  padding: 1.2rem 1.6rem;
+  outline: 1px solid #FFFFFF;
+  transition: all 0.3s;
+  width: auto;
+}
+.input::-moz-placeholder {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 120%;
+  color: #808080;
+}
+.input::placeholder {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 120%;
+  color: #808080;
+}
+.input:focus {
+  outline: 1px solid #808080;
+  border: 1px solid #808080;
+}
+.input:valid {
+  border: 1px solid #808080;
+}
+@media screen and (min-width: 900px) {
+  .input:hover {
+    border: 1px solid #808080;
+  }
+}
+@media screen and (min-width: 768px) {
+  .input {
+    padding: 1.6rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .form_wide-tab {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    justify-content: space-between;
+  }
 }
 
 .nav {
@@ -547,6 +716,100 @@ p {
   .header__image {
     height: calc(25vw - 10.4rem);
   }
+}
+
+.section-contact__links {
+  padding: 0.8rem 1.6rem 1.6rem 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .section-contact__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem;
+  }
+}
+.section-contact__follow {
+  padding: 1.6rem 1.6rem 0.8rem 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .section-contact__follow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem;
+    border-right: 1px solid #121212;
+  }
+}
+@media screen and (min-width: 900px) {
+  .section-contact__info {
+    order: -1;
+  }
+}
+.section-contact__image {
+  height: calc(100vh - 7rem - 10.62rem);
+}
+@media screen and (min-width: 768px) {
+  .section-contact__image {
+    height: 65vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  .section-contact__image {
+    height: calc(100vh - 7rem - 7.86rem);
+  }
+}
+.section-contact__element {
+  border-left: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+  padding: 4rem 1.6rem;
+}
+@media screen and (min-width: 900px) {
+  .section-contact__element {
+    height: calc((100vh - 7rem - 7.86rem) / 2);
+  }
+}
+.section-contact__title {
+  padding: 4rem 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .section-contact__title {
+    padding: 8rem;
+  }
+}
+
+.footer {
+  border-right: 1px solid #121212;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 900px) {
+  .footer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.footer__section {
+  padding: 4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  border-left: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+}
+@media screen and (min-width: 768px) {
+  .footer__section {
+    padding: 4rem;
+    gap: 2.4rem;
+  }
+}
+.footer__element {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 @media screen and (min-width: 900px) {

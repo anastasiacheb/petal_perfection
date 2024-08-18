@@ -1,0 +1,33 @@
+.footer {
+
+    border-right: $border;
+    
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__section {
+        padding: 4rem 1.6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        border-left: $border;
+        border-bottom: $border;
+
+        @include tablet {
+            padding: 4rem;
+            gap: 2.4rem;
+        }
+    }
+
+    &__element {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}

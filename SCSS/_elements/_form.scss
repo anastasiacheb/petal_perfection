@@ -1,0 +1,61 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000000s ease-in-out 0s;
+}
+
+.input {
+    border: 1px solid $lightGray;
+    @include medium;
+    font-size: 1.4rem;
+    line-height: 120%;
+    color: $black;
+    padding: 1.2rem 1.6rem;
+    outline: 1px solid $white;
+    transition: $transition;
+    width: auto;
+
+    &::placeholder {
+        @include medium;
+        font-size: 1.4rem;
+        line-height: 120%;
+        color: $gray;
+    }
+
+    &:focus {
+        outline: 1px solid $gray;
+        border: 1px solid $gray;
+    }
+
+    &:valid {
+        border: 1px solid $gray;
+    }
+
+    @include desktop {
+        &:hover {
+            border: 1px solid $gray;
+        }
+    }
+
+    @include tablet {
+        padding: 1.6rem;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    &_wide-tab {
+
+        @include tablet {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6rem;
+            justify-content: space-between;
+        }
+    }
+}

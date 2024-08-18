@@ -1,6 +1,8 @@
 @import "../_elements/index",
 "nav",
-"header";
+"header",
+"section-contact",
+"footer";
 
 .element_mobile {
     @include desktop {
