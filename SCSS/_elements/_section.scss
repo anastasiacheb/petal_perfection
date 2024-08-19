@@ -2,6 +2,10 @@
 
     border-right: $border;
 
+    &_bottom {
+        border-bottom: $border;
+    }
+
     &__column {
         padding: 4rem 1.6rem;
         border-bottom: $border;
@@ -22,6 +26,19 @@
                 top: 7rem;
                 height: calc(100vh - 6.92rem);
             }
+        }
+
+        &_small {
+            height: auto;
+
+            @include desktop {
+                border-bottom: none;
+            }
+            
+        }
+
+        &_noborder {
+            border-bottom: none;
         }
     }
 
@@ -65,5 +82,17 @@
 
     &__button {
         margin-top: 6.4rem;
+    }
+
+    &_center {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        //align-items: center;
+
+        @include tablet {
+            align-items: center;
+        }
     }
 }

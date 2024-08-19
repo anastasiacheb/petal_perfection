@@ -38,11 +38,37 @@
             height: 20vw;
         }
     }
+
+    &__image {
+        overflow: hidden;
+    }
+
+    &__image img{
+        transition: $transition;
+        scale: 1;
+    }
+
+    @include desktop {
+        &__image:hover img {
+            scale: 1.2;
+        }
+    }    
 }
 
 .element {
     border-left: $border;
     border-bottom: $border;
+
+    &_center {
+        @include center;
+    }
+
+    &_center-tab {
+
+        @include tablet {
+            @include center;
+        }
+    }
 }
 
 .image {
@@ -53,6 +79,6 @@
     }
 
     @include desktop {
-        height: 50vw;
+        height: calc(100vh - 7rem);
     }
 }
