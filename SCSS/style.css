@@ -868,7 +868,7 @@ input:-webkit-autofill:active {
 .section-parallax {
   position: relative;
   color: #FFFFFF;
-  background-image: url("assets/images/Service_2_Section.png");
+  background-image: url("../assets/images/Service_2_Section.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
