@@ -1,3 +1,11 @@
+@use "../abstracts" as *;
+
+.element_mobile {
+    @include desktop {
+        display: none;
+    }
+}
+
 .card {
     height: 50vw;
     border-left: $border;
