@@ -4,10 +4,14 @@
     position: relative;
     color: $white;
     background-image: url("../assets/images/Service_2_Section.png");
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include desktop {
+        background-attachment: fixed;
+    }
+
 
     p {
         max-width: 55rem;

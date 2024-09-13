@@ -300,12 +300,6 @@ p {
   }
 }
 
-@media screen and (min-width: 900px) {
-  .element_mobile {
-    display: none;
-  }
-}
-
 .card {
   height: 50vw;
   border-left: 1px solid #121212;
@@ -547,6 +541,12 @@ input:-webkit-autofill:active {
 @media screen and (min-width: 768px) {
   .section_center {
     align-items: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .element_mobile {
+    display: none;
   }
 }
 
@@ -838,10 +838,14 @@ input:-webkit-autofill:active {
   position: relative;
   color: #FFFFFF;
   background-image: url("../assets/images/Service_2_Section.png");
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (min-width: 900px) {
+  .section-parallax {
+    background-attachment: fixed;
+  }
 }
 .section-parallax p {
   max-width: 55rem;
@@ -896,4 +900,10 @@ input:-webkit-autofill:active {
 }
 .footer h2, .footer h3 {
   color: gray;
+}
+
+@media screen and (min-width: 900px) {
+  .element_mobile {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

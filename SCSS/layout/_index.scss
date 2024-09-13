@@ -3,3 +3,11 @@
 @forward 'section-contact';
 @forward 'section-parallax';
 @forward 'footer';
+
+@use "../abstracts" as *;
+
+.element_mobile {
+    @include desktop {
+        display: none;
+    }
+}
