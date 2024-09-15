@@ -14,6 +14,7 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   display: inline-block;
+  overflow: hidden;
 }
 
 ul {
@@ -194,6 +195,13 @@ p {
   line-height: 120%;
 }
 
+.text-caption_bold {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 120%;
+}
+
 .button {
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
@@ -310,6 +318,19 @@ p {
     height: calc((100vh - 70px) / 2);
   }
 }
+.card__tab {
+  height: 100vw;
+}
+@media screen and (min-width: 768px) {
+  .card__tab {
+    height: 50vw;
+  }
+}
+@media screen and (min-width: 900px) {
+  .card__tab {
+    height: calc((100vh - 70px) / 2);
+  }
+}
 .card-category {
   padding: 1.2rem;
   position: relative;
@@ -352,6 +373,27 @@ p {
   .card__image:hover img {
     scale: 1.2;
   }
+}
+.card-prod {
+  position: relative;
+}
+.card-prod_description {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .card-prod_description {
+    bottom: 2.4rem;
+  }
+}
+.card-prod_description p:last-child {
+  color: #808080;
 }
 
 .element {
@@ -482,7 +524,7 @@ input:-webkit-autofill:active {
   .section__column_sticky {
     position: sticky;
     align-self: start;
-    top: 7rem;
+    top: 6.9rem;
     height: calc(100vh - 6.92rem);
   }
 }
@@ -506,6 +548,10 @@ input:-webkit-autofill:active {
 .section_double-mob {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+.section_double-tab {
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .section_double-tab {
@@ -541,12 +587,6 @@ input:-webkit-autofill:active {
 @media screen and (min-width: 768px) {
   .section_center {
     align-items: center;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .element_mobile {
-    display: none;
   }
 }
 
@@ -861,6 +901,28 @@ input:-webkit-autofill:active {
   left: 0;
 }
 .section-parallax__content {
+  position: relative;
+  z-index: 1000;
+}
+
+.section-cat {
+  color: #FFFFFF;
+  background-image: url("../assets/images/left_colum.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-cat__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  opacity: 0.4;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.section-cat__content {
   position: relative;
   z-index: 1000;
 }

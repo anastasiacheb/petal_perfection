@@ -10,6 +10,19 @@
         //width: 25vw;
     }
 
+    &__tab {
+        height: 100vw;
+
+        @include tablet {
+            height: 50vw;
+        }
+
+        @include desktop {
+            height: calc((100vh - 70px)/2);
+            //width: 25vw;
+        }
+    }
+
     &-category {
         padding: 1.2rem;
         position: relative;
@@ -54,7 +67,30 @@
         &__image:hover img {
             scale: 1.2;
         }
-    }    
+    }
+    
+    &-prod {
+        position: relative;
+
+        &_description {
+            position: absolute;
+            bottom: 1.2rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            align-items: center;
+
+            @include tablet {
+                bottom: 2.4rem;
+            }
+
+            & p:last-child {
+                color: $gray;
+            }
+        }
+    }
 }
 
 .element {

@@ -3,10 +3,5 @@
 @forward 'form';
 @forward 'icons';
 @forward 'section';
-@use "../abstracts" as *;
 
-.element_mobile {
-    @include desktop {
-        display: none;
-    }
-}
+
