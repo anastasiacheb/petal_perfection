@@ -8,6 +8,10 @@
         border-bottom: $border;
     }
 
+    &_left {
+        border-left: $border;
+    }
+
     &__column {
         padding: 4rem 1.6rem;
         border-bottom: $border;

@@ -117,6 +117,79 @@
     }
 
     @include desktop {
-        height: calc(100vh - 7rem);
+        height: calc(100vh - 6.9rem);
+    }
+}
+
+.product {
+    @include column;
+    gap: 4rem;
+    padding: 4rem 1.6rem;
+    border-bottom: $border;
+    border-left: $border;
+
+    @include tablet {
+        padding: 4rem;
+    }
+
+    &__wrap {
+        @include column;
+        gap: 2.4rem;
+    }
+
+    &__sec {
+        @include column;
+        gap: 1.6rem;
+    }
+
+    &__title {
+        @include column;
+        gap: 0.8rem;
+
+        @include tablet {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+
+    &__slider {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__image {
+        border: 1px solid $lightGray;
+        object-fit: contain;
+
+        @include tablet {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+
+    &__disc {
+        @include column;
+        gap: 0.4rem;
+        
+    }
+
+    &__comb {
+        @include column;
+        gap: 0.8rem;
+        width: 20rem;
+        height: 20rem;
+
+        @include tablet {
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+.slider {
+    &__content {
+        display: flex;
+        gap: 1.6rem;
     }
 }
