@@ -193,3 +193,12 @@
         gap: 1.6rem;
     }
 }
+
+.image {
+
+    &_size-s {
+        width: 16rem;
+        height: 16rem;
+        border: $border;
+    }
+}
