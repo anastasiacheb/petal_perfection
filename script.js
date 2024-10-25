@@ -77,8 +77,6 @@ let total = 0;
 
 document.addEventListener("DOMContentLoaded", loadCart);
 
-/*import 'https://anastasiacheb.github.io/petal_perfection/script.js';*/
-
 function saveStorage() {
     localStorage.setItem("itemList", JSON.stringify(itemList));
 }
