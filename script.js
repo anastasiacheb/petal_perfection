@@ -67,7 +67,7 @@ function enableScroll() {
 }
 
 
-let itemList;
+let itemList = [];
 loadStorage();
 if (itemList.length == 0) {
     itemList = [];
