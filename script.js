@@ -71,8 +71,6 @@ if (itemList == null) {
 }
 
 /*this part is only for github pages*/
-let loc = '/' + location.pathname.split("/")[1] + '/';
-
 const setItem = localStorage.setItem;
 localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, ['/' + location.pathname.split("/")[1] + '/' + ':' + key, value])
 
@@ -80,6 +78,7 @@ localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(local
 const getItem = localStorage.getItem;
 localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, ['/' + location.pathname.split("/")[1] + '/' + ':' + key]);
 
+localStorage.setItem("itemList", JSON.stringify(itemList));
 
 let total = 0;
 
@@ -140,7 +139,6 @@ function addCart() {
     let quantity = this.previousElementSibling.childNodes[5].childNodes[3].childNodes[3].value;
     let price = description[1].slice(1);
     let newProduct = {imgSrc, title, quantity, price};
-
 
     /*loadStorage();*/
     itemList = JSON.parse(localStorage.getItem("itemList"));
