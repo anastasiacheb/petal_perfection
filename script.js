@@ -70,7 +70,7 @@ if (itemList == null) {
     itemList = [];
 }
 
-
+/*this part is only for github pages*/
 const setItem = localStorage.setItem;
 localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, [location.pathname + ':' + key, value])
 
@@ -78,20 +78,18 @@ localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(local
 const getItem = localStorage.getItem;
 localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, [location.pathname + ':' + key]);
 
-localStorage.setItem("test", "test");
-localStorage.setItem("itemList", JSON.stringify(itemList));
 
 let total = 0;
 
 document.addEventListener("DOMContentLoaded", loadCart);
 
-function saveStorage() {
+/*function saveStorage() {
     localStorage.setItem("itemList", JSON.stringify(itemList));
-}
+}*/
 
-function loadStorage() {
+/*function loadStorage() {
     itemList = JSON.parse(localStorage.getItem("itemList"));
-}
+}*/
 
 cartBtn.addEventListener("click", loadContent);
 
@@ -110,7 +108,8 @@ for (let i = 0; i < addCartBtns.length; i++) {
 }
 
 function loadCart() {
-    loadStorage();
+    /*loadStorage();*/
+    itemList = JSON.parse(localStorage.getItem("itemList"));
 
     updateTotal();
 
@@ -140,7 +139,8 @@ function addCart() {
     let price = description[1].slice(1);
     let newProduct = {imgSrc, title, quantity, price};
 
-    loadStorage();
+    /*loadStorage();*/
+    itemList = JSON.parse(localStorage.getItem("itemList"));
 
     if (itemList.find((el) => el.title == newProduct.title)) {
         alert("already added");
@@ -149,7 +149,8 @@ function addCart() {
         itemList.push(newProduct);
     };
 
-    saveStorage();
+    /*saveStorage();*/
+    localStorage.setItem("itemList", JSON.stringify(itemList));
 
     
     if (itemList.length == 1) {
@@ -189,7 +190,8 @@ function createCart(total) {
 }
 
 function updateTotal() {
-    loadStorage();
+    /*loadStorage();*/
+    itemList = JSON.parse(localStorage.getItem("itemList"));
     total = 0;
     for (let i = 0; i < itemList.length; i++) {
         total += Number(itemList[i].price)*Number(itemList[i].quantity);
@@ -213,10 +215,12 @@ function createCartElement(imgSrc, title, quantity, price) {
 }
 
 function removeItem() {
-    loadStorage();
+    /*loadStorage();*/
+    itemList = JSON.parse(localStorage.getItem("itemList"));
     let title = this.previousElementSibling.childNodes[1].innerHTML;
     itemList = itemList.filter(el => el.title != title);
-    saveStorage();
+    /*saveStorage();*/
+    localStorage.setItem("itemList", JSON.stringify(itemList));
     
     let sum = this.parentElement.parentElement.parentElement.nextElementSibling;
     let message = sum.nextElementSibling;
