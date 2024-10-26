@@ -66,27 +66,27 @@ function enableScroll() {
 }
 
 let itemList = [];
-/*if (itemList == null) {
+if (itemList == null) {
     itemList = [];
-}*/
+}
 
 
-const setItem = localStorage.setItem;
+/*const setItem = localStorage.setItem;
 localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, [location.pathname + ':' + key, value])
 
 const getItem = localStorage.getItem;
-localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, [location.pathname + ':' + key]);
+localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, [location.pathname + ':' + key]);*/
 
 let total = 0;
 
 document.addEventListener("DOMContentLoaded", loadCart);
 
 function saveStorage() {
-    localStorage.setItem("itemList", JSON.stringify(itemList));
+    localStorage.setItem("/petal_perfection/:itemList", JSON.stringify(itemList));
 }
 
 function loadStorage() {
-    itemList = JSON.parse(localStorage.getItem("itemList"));
+    itemList = JSON.parse(localStorage.getItem("/petal_perfection/:itemList"));
 }
 
 cartBtn.addEventListener("click", loadContent);
