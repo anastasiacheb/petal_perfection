@@ -71,27 +71,25 @@ if (itemList == null) {
 }
 
 
-/*const setItem = localStorage.setItem;
+const setItem = localStorage.setItem;
 localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, [location.pathname + ':' + key, value])
 
-/petal_perfection/:itemList
 
 const getItem = localStorage.getItem;
-localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, [location.pathname + ':' + key]);*/
+localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, [location.pathname + ':' + key]);
+
+localStorage.setItem("test", "test");
+localStorage.setItem("itemList", JSON.stringify(itemList));
 
 let total = 0;
 
 document.addEventListener("DOMContentLoaded", loadCart);
 
 function saveStorage() {
-    const setItem = localStorage.setItem;
-    localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, [location.pathname + ':' + key, value])
     localStorage.setItem("itemList", JSON.stringify(itemList));
 }
 
 function loadStorage() {
-    const getItem = localStorage.getItem;
-    localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, [location.pathname + ':' + key])
     itemList = JSON.parse(localStorage.getItem("itemList"));
 }
 
