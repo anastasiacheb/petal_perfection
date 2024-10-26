@@ -1,5 +1,4 @@
 
-
 let burgerBnt = document.querySelector(".burger-bnt");
 let menu = document.querySelector(".nav__menu");
 let overlay = document.querySelector(".nav__overlay");
@@ -66,15 +65,17 @@ function enableScroll() {
     window.onscroll = function () { };
 }
 
-import 'https://anastasiacheb.github.io/petal_perfection/script.js';
-localStorage.setItem('test', 'test');
-    
-
-
 let itemList = [];
 /*if (itemList == null) {
     itemList = [];
 }*/
+
+
+const setItem = localStorage.setItem;
+localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, [location.pathname + ':' + key, value])
+
+const getItem = localStorage.getItem;
+localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, [location.pathname + ':' + key]);
 
 let total = 0;
 
