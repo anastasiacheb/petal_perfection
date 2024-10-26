@@ -73,8 +73,6 @@ if (itemList == null) {
 /*this part is only for github pages*/
 let loc = '/' + location.pathname.split("/")[1] + '/';
 
-alert(loc);
-
 const setItem = localStorage.setItem;
 localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, [loc + ':' + key, value])
 
