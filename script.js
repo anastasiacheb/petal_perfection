@@ -74,11 +74,11 @@ if (itemList == null) {
 let loc = '/' + location.pathname.split("/")[1] + '/';
 
 const setItem = localStorage.setItem;
-localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, [loc + ':' + key, value])
+localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, ['/' + location.pathname.split("/")[1] + '/' + ':' + key, value])
 
 
 const getItem = localStorage.getItem;
-localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, [loc + ':' + key]);
+localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, ['/' + location.pathname.split("/")[1] + '/' + ':' + key]);
 
 
 let total = 0;
