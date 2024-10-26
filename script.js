@@ -66,11 +66,15 @@ function enableScroll() {
     window.onscroll = function () { };
 }
 
+import 'https://anastasiacheb.github.io/petal_perfection/script.js';
+localStorage.setItem('test', 'test');
+    
 
-let itemList;
-if (itemList == null) {
+
+let itemList = [];
+/*if (itemList == null) {
     itemList = [];
-}
+}*/
 
 let total = 0;
 
