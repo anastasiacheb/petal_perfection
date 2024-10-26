@@ -71,14 +71,16 @@ if (itemList == null) {
 }
 
 /*this part is only for github pages*/
-let location = '/' + location.pathname.split("/")[1] + '/';
+let loc = '/' + location.pathname.split("/")[1] + '/';
+
+alert(loc);
 
 const setItem = localStorage.setItem;
-localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, [location + ':' + key, value])
+localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(localStorage, [loc + ':' + key, value])
 
 
 const getItem = localStorage.getItem;
-localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, [location + ':' + key]);
+localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, [loc + ':' + key]);
 
 
 let total = 0;
