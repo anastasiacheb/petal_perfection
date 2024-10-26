@@ -64,7 +64,7 @@ function enableScroll() {
 }
 
 //shopping cart functionality
-let itemList
+let itemList = [];
 if (itemList == null) {
     itemList = [];
 }
@@ -77,6 +77,8 @@ localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(local
 const getItem = localStorage.getItem;
 localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, ['/' + location.pathname.split("/")[1] + '/' + ':' + key]);
 
+itemList = JSON.parse(localStorage.getItem("itemList"));
+localStorage.setItem("itemList", JSON.stringify(itemList));
 itemList = JSON.parse(localStorage.getItem("itemList"));
 
 let total = 0;
