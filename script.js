@@ -64,10 +64,7 @@ function enableScroll() {
 }
 
 //shopping cart functionality
-let itemList = [];
-if (itemList == null) {
-    itemList = [];
-}
+
 
 /*this part is only for github pages*/
 const setItem = localStorage.setItem;
@@ -77,9 +74,12 @@ localStorage.constructor.prototype.setItem = (key, value) => setItem.apply(local
 const getItem = localStorage.getItem;
 localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, ['/' + location.pathname.split("/")[1] + '/' + ':' + key]);
 
+let itemList;
 itemList = JSON.parse(localStorage.getItem("itemList"));
-localStorage.setItem("itemList", JSON.stringify(itemList));
-itemList = JSON.parse(localStorage.getItem("itemList"));
+if (itemList == null) {
+    let itemList = [];
+    localStorage.setItem("itemList", JSON.stringify(itemList));
+};
 
 let total = 0;
 
