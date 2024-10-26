@@ -54,6 +54,8 @@
         background-color: $white;
         border-top: $border;
         border-right: $border;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
 
         @include desktop {
             width: 50vw;
@@ -154,6 +156,8 @@
         position: fixed;
         bottom: 0;
         width: 100%;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
 
         @include desktop {
             width: 50vw;

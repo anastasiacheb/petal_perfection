@@ -1,4 +1,5 @@
 
+//mobile navigation menu
 let burgerBnt = document.querySelector(".burger-bnt");
 let menu = document.querySelector(".nav__menu");
 let overlay = document.querySelector(".nav__overlay");
@@ -19,6 +20,7 @@ overlay.addEventListener("click",() => {
     overlay.classList.add("invisible");
 } )
 
+//shopping cart visibility
 let cartBtn = document.querySelector(".nav__cart");
 let cart = document.querySelector(".cart__wrap");
 let cartCloseBtn = document.querySelector(".cart__close");
@@ -40,7 +42,7 @@ cartOverlay.addEventListener("click",() => {
 } )
 
 
-
+//disabling scroll while menu or cart is open
 burgerBnt.addEventListener("click", disableScroll);
 closeBtn.addEventListener("click", enableScroll);
 overlay.addEventListener("click", enableScroll);
@@ -49,22 +51,19 @@ cartCloseBtn.addEventListener("click", enableScroll);
 cartOverlay.addEventListener("click", enableScroll);
 
 function disableScroll() {
-    scrollTop =
-        window.pageYOffset ||
-        document.documentElement.scrollTop;
-    scrollLeft =
-        window.pageXOffset ||
-        document.documentElement.scrollLeft,
-
-        window.onscroll = function () {
-            window.scrollTo(scrollLeft, scrollTop);
-        };
+    let scrollTop = document.documentElement.scrollTop;
+    let scrollLeft = document.documentElement.scrollLeft;
+    
+    window.onscroll = function () {
+        window.scrollTo(scrollLeft, scrollTop);
+    };
 }
 
 function enableScroll() {
     window.onscroll = function () { };
 }
 
+//shopping cart functionality
 let itemList
 if (itemList == null) {
     itemList = [];
@@ -239,3 +238,5 @@ function removeItem() {
     let totalValue = document.querySelector(".total");
     totalValue.innerHTML =`$${total}`;
 }
+
+
