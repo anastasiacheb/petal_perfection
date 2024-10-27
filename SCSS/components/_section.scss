@@ -104,4 +104,18 @@
             align-items: center;
         }
     }
+
+    &_image {
+        height: 107vw;
+
+    @include tablet {
+        height: 65vw;
+    }
+
+    @include desktop {
+        height: calc(100vh - 6.9rem);
+        min-height: 79.3rem;
+    }
+    }
+
 }
