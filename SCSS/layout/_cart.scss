@@ -47,6 +47,10 @@
         }
         }
 
+    &__content {
+        overflow-y: auto;
+    }
+
     &__head {
         position: fixed;
         top: 0;

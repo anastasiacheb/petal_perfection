@@ -965,6 +965,9 @@ input:-webkit-autofill:active {
 .cart__wrap.invisible {
   right: -100%;
 }
+.cart__content {
+  overflow-y: auto;
+}
 .cart__head {
   position: fixed;
   top: 0;
