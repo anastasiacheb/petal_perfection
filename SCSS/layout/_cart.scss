@@ -25,6 +25,7 @@
         transition: $transition;
         height: 100vh;
         overflow-y: auto;
+        overflow-x: hidden;
 
         &::-webkit-scrollbar {
             width: 4px;
@@ -48,12 +49,10 @@
         }
 
     &__head {
-        position: fixed;
+        position: absolute;
         top: 0;
         width: 100%;
         background-color: $white;
-        border-top: $border;
-        border-right: $border;
         transform: translateZ(0);
         -webkit-transform: translateZ(0);
 
@@ -68,7 +67,6 @@
         align-items: center;
         padding: 1.2rem 2.4rem;
         border-bottom: $border;
-        border-right: $border;
 
         @include tablet {
             padding: 1.6rem 4rem;
@@ -153,7 +151,7 @@
     }
 
     &__btn {
-        position: fixed;
+        position: absolute;
         bottom: 0;
         width: 100%;
         transform: translateZ(0);

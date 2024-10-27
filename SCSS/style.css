@@ -948,6 +948,7 @@ input:-webkit-autofill:active {
   transition: all 0.3s;
   height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .cart__wrap::-webkit-scrollbar {
   width: 4px;
@@ -967,12 +968,10 @@ input:-webkit-autofill:active {
   right: -100%;
 }
 .cart__head {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   background-color: #FFFFFF;
-  border-top: 1px solid #121212;
-  border-right: 1px solid #121212;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
 }
@@ -987,7 +986,6 @@ input:-webkit-autofill:active {
   align-items: center;
   padding: 1.2rem 2.4rem;
   border-bottom: 1px solid #121212;
-  border-right: 1px solid #121212;
 }
 @media screen and (min-width: 768px) {
   .cart__top {
@@ -1074,7 +1072,7 @@ input:-webkit-autofill:active {
   flex-direction: column;
 }
 .cart__btn {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   transform: translateZ(0);
