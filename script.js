@@ -241,4 +241,25 @@ function removeItem() {
     totalValue.innerHTML =`$${total}`;
 }
 
+//quantity 
+
+let plusBtn = document.querySelector(".plus_btn");
+let minusBtn = document.querySelector(".minus_btn");
+let quant = document.querySelector(".qty__feild");
+
+plusBtn.addEventListener("click", () => {
+    let quantValue = Number(quant.value);
+    if (quantValue < 10) {
+        quantValue += 1;
+        quant.value = quantValue;
+    }
+})
+
+minusBtn.addEventListener("click", () => {
+    let quantValue = Number(quant.value);
+    if (quantValue > 1) {
+        quantValue -= 1;
+        quant.value = quantValue;
+    }
+})
 
