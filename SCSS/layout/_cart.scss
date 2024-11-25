@@ -2,8 +2,8 @@
 
 .cart {
 
-    position: absolute;
-    top: 0;
+    position: relative;
+    //top: 0;
     width: 100%;
     background-color: $white;
 
@@ -20,7 +20,7 @@
     }
 
     &__wrap {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         z-index: 1000;
@@ -58,18 +58,19 @@
 
 
     &__head {
-        width: 100vw;
+        width: 100%;
         position: fixed;
         top: 0;
+        //right: 0;
         background-color: $white;
         transform: translateZ(0);
         -webkit-transform: translateZ(0);
         border-top: $border;
         border-right: $border;
-        border-left: $border;
+        //border-left: $border;
 
         @include desktop {
-            width: 50vw;
+            width: 100%;
         }
     }
     
@@ -78,7 +79,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 1.2rem 2.4rem;
-        //border-bottom: $border;
+        border-bottom: $border;
 
         @include tablet {
             padding: 1.6rem 4rem;
@@ -196,5 +197,9 @@
             transition: opacity 0.3s,
             left 0s 0.3s;
         }
+     }
+
+     &__content {
+        width: 100%;
      }
 }

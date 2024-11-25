@@ -750,6 +750,11 @@ input:-webkit-autofill:active {
     border-bottom: none;
   }
 }
+@media screen and (min-width: 1100px) and (min-width: 1100px) {
+  .section__column_small {
+    border-left: none;
+  }
+}
 .section__column_noborder {
   border-bottom: none;
 }
@@ -815,6 +820,17 @@ input:-webkit-autofill:active {
   .section_image {
     height: calc(100vh - 6.9rem);
     min-height: 79.3rem;
+  }
+}
+.section_centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #121212;
+}
+@media screen and (min-width: 1100px) {
+  .section_sticky {
+    border-left: 1px solid #121212;
   }
 }
 
@@ -964,8 +980,7 @@ input:-webkit-autofill:active {
 }
 
 .cart {
-  position: absolute;
-  top: 0;
+  position: relative;
   width: 100%;
   background-color: #FFFFFF;
 }
@@ -981,7 +996,7 @@ input:-webkit-autofill:active {
   display: none;
 }
 .cart__wrap {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 1000;
@@ -1013,7 +1028,7 @@ input:-webkit-autofill:active {
   border: none;
 }
 .cart__head {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
   background-color: #FFFFFF;
@@ -1021,11 +1036,10 @@ input:-webkit-autofill:active {
   -webkit-transform: translateZ(0);
   border-top: 1px solid #121212;
   border-right: 1px solid #121212;
-  border-left: 1px solid #121212;
 }
 @media screen and (min-width: 1100px) {
   .cart__head {
-    width: 50vw;
+    width: 100%;
   }
 }
 .cart__top {
@@ -1033,6 +1047,7 @@ input:-webkit-autofill:active {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2.4rem;
+  border-bottom: 1px solid #121212;
 }
 @media screen and (min-width: 768px) {
   .cart__top {
@@ -1150,6 +1165,9 @@ input:-webkit-autofill:active {
   left: -100%;
   transition: opacity 0.3s, left 0s 0.3s;
 }
+.cart__content {
+  width: 100%;
+}
 
 .header {
   margin-top: 5rem;
@@ -1242,6 +1260,7 @@ input:-webkit-autofill:active {
 }
 .section-contact__follow {
   padding: 1.6rem 1.6rem 0.8rem 1.6rem;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .section-contact__follow {
@@ -1287,6 +1306,17 @@ input:-webkit-autofill:active {
 @media screen and (min-width: 768px) {
   .section-contact__title {
     padding: 8rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .section-contact__tab {
+    border-bottom: none;
+    overflow: auto;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .section-contact__wrap {
+    border-bottom: 1px solid #121212;
   }
 }
 

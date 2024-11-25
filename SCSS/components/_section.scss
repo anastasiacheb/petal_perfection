@@ -39,6 +39,10 @@
 
             @include desktop {
                 border-bottom: none;
+
+                @include desktop {
+                    border-left: none;
+                }
             }
             
         }
@@ -116,6 +120,17 @@
         height: calc(100vh - 6.9rem);
         min-height: 79.3rem;
     }
+    }
+
+    &_centered {
+        @include center;
+        border-right: $border;
+    }
+
+    &_sticky {
+        @include desktop {
+            border-left: $border;
+        }
     }
 
 }
