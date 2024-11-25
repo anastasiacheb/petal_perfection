@@ -506,8 +506,25 @@ p {
 }
 
 .slider__content {
+  width: 20rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .slider__content {
+    width: auto;
+    display: flex;
+    gap: 1.6rem;
+  }
+}
+.slider__wrap {
   display: flex;
   gap: 1.6rem;
+  width: 1000px;
+}
+@media screen and (min-width: 768px) {
+  .slider__wrap {
+    width: auto;
+  }
 }
 
 .image_size-s {
@@ -970,13 +987,12 @@ input:-webkit-autofill:active {
   z-index: 1000;
   width: 100%;
   background-color: #FFFFFF;
-  border: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+  border-right: 1px solid #121212;
+  border-left: 1px solid #121212;
   transition: all 0.3s;
   overflow-y: auto;
-  height: 100vh;
-  /*display: flex;
-  flex-direction: column;
-  justify-content: space-between;*/
+  height: 100dvh;
 }
 .cart__wrap::-webkit-scrollbar {
   width: 4px;
@@ -993,7 +1009,8 @@ input:-webkit-autofill:active {
   }
 }
 .cart__wrap.invisible {
-  right: -100%;
+  width: 0;
+  border: none;
 }
 .cart__head {
   width: 100vw;
@@ -1004,6 +1021,7 @@ input:-webkit-autofill:active {
   -webkit-transform: translateZ(0);
   border-top: 1px solid #121212;
   border-right: 1px solid #121212;
+  border-left: 1px solid #121212;
 }
 @media screen and (min-width: 1100px) {
   .cart__head {
@@ -1015,7 +1033,6 @@ input:-webkit-autofill:active {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2.4rem;
-  border-bottom: 1px solid #121212;
 }
 @media screen and (min-width: 768px) {
   .cart__top {
@@ -1126,6 +1143,7 @@ input:-webkit-autofill:active {
   left: 0;
   opacity: 1;
   transition: opacity 0.3s, left 0s;
+  z-index: 1000;
 }
 .cart__overlay.invisible {
   opacity: 0;
@@ -1275,7 +1293,7 @@ input:-webkit-autofill:active {
 .section-parallax {
   position: relative;
   color: #FFFFFF;
-  background-image: url("../assets/images/Service_2_Section.png");
+  background-image: url("../assets/images/Service_2_Section.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1305,7 +1323,7 @@ input:-webkit-autofill:active {
 
 .section-cat {
   color: #FFFFFF;
-  background-image: url("../assets/images/left_colum.png");
+  background-image: url("../assets/images/left_colum.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

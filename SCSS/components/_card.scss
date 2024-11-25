@@ -189,8 +189,24 @@
 
 .slider {
     &__content {
+        width: 20rem;
+        overflow: hidden;
+
+        @include tablet {
+            width: auto;
+            display: flex;
+            gap: 1.6rem;
+        }
+    }
+
+    &__wrap {
         display: flex;
         gap: 1.6rem;
+        width: 1000px;
+
+        @include tablet {
+            width: auto;
+        }
     }
 }
 
