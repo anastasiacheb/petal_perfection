@@ -20,7 +20,12 @@
     overflow: hidden;
     object-position: center;
     opacity: 0;
-    height: 100%;
+}
+
+.zoom {
+    scale: 1.2;
+    overflow: hidden;
+    object-position: center;
 }
 
 .fadein {

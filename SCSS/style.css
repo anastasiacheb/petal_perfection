@@ -858,7 +858,13 @@ input:-webkit-autofill:active {
   -o-object-position: center;
      object-position: center;
   opacity: 0;
-  height: 100%;
+}
+
+.zoom {
+  scale: 1.2;
+  overflow: hidden;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .fadein {

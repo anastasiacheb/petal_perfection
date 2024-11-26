@@ -13,7 +13,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.remove('fadeup');
-            entry.target.classList.remove('zoomin');
+            entry.target.classList.remove('zoom');
         }
 
     })
