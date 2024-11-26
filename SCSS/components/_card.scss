@@ -120,6 +120,10 @@
     @include desktop {
         height: calc(100vh - 6.9rem);
     }
+
+    & > div {
+        height: 100%;
+    }
 }
 
 .product {

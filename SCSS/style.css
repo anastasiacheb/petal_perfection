@@ -437,6 +437,9 @@ p {
     height: calc(100vh - 6.9rem);
   }
 }
+.image > div {
+  height: 100%;
+}
 
 .product {
   display: flex;
