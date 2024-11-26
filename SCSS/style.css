@@ -425,6 +425,7 @@ p {
 
 .image {
   height: 107vw;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .image {
@@ -835,6 +836,33 @@ input:-webkit-autofill:active {
   .section_sticky {
     border-left: 1px solid #121212;
   }
+}
+
+.onload {
+  transition: all 0.8s;
+}
+
+.onscroll {
+  transition: all 0.8s;
+  opacity: 1;
+}
+
+.fadeup {
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.zoomin {
+  scale: 1.2;
+  overflow: hidden;
+  -o-object-position: center;
+     object-position: center;
+  opacity: 0;
+  height: 100%;
+}
+
+.fadein {
+  opacity: 0;
 }
 
 .nav {
@@ -1285,6 +1313,7 @@ input:-webkit-autofill:active {
 }
 .section-contact__image {
   height: 107vw;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .section-contact__image {
@@ -1295,6 +1324,9 @@ input:-webkit-autofill:active {
   .section-contact__image {
     height: calc(100vh - 7rem - 7.86rem);
   }
+}
+.section-contact__image > div {
+  height: 100%;
 }
 .section-contact__element {
   border-left: 1px solid #121212;

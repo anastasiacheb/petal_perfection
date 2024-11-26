@@ -33,6 +33,7 @@
 
     &__image {
         height: 107vw;
+        overflow: hidden;
         //height: calc(100vh - 7rem - 10.62rem);
 
         @include tablet {
@@ -41,6 +42,10 @@
 
         @include desktop {
             height: calc(100vh - 7rem - 7.86rem);
+        }
+
+        & > div {
+            height: 100%;
         }
     }
 

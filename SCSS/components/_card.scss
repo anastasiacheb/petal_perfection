@@ -111,6 +111,7 @@
 
 .image {
     height: 107vw;
+    overflow: hidden;
 
     @include tablet {
         height: 65vw;

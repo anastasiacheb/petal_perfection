@@ -1,3 +1,32 @@
+let onLoadElem = document.querySelectorAll(".onload");
+let onScrollElem = document.querySelectorAll(".onscroll");
+
+window.addEventListener("load", () => {
+    for (let i = 0; i < onLoadElem.length; i++) {
+        onLoadElem[i].classList.remove("fadeup");
+        onLoadElem[i].classList.remove("zoomin");
+        onLoadElem[i].classList.remove("fadein");
+    }
+})
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.remove('fadeup');
+            entry.target.classList.remove('zoomin');
+        }
+
+    })
+},
+   {threshold: 0.5
+});
+
+  for (let i = 0; i < onScrollElem.length; i++) {
+   const elements = onScrollElem[i];
+
+    observer.observe(elements);
+  }
+
 
 //mobile navigation menu
 let burgerBnt = document.querySelector(".burger-bnt");

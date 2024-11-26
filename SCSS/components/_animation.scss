@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+
+.onload {
+    transition: all 0.8s;
+    //opacity: 1;
+}
+
+.onscroll {
+    transition: all 0.8s;
+    opacity: 1;
+}
+
+.fadeup {
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.zoomin {
+    scale: 1.2;
+    overflow: hidden;
+    object-position: center;
+    opacity: 0;
+    height: 100%;
+}
+
+.fadein {
+    opacity: 0;
+}
