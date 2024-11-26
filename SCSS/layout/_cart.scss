@@ -27,6 +27,7 @@
         border-left: $border;
         transition: $transition;
         overflow-y: auto;
+        overflow-x: hidden;
         height: 100svh;
 
         &::-webkit-scrollbar {
@@ -52,10 +53,9 @@
         }
         }
 
-
     &__head {
-        width: 100vw;
-        position: fixed;
+        width: 100%;
+        position: sticky;
         top: 0;
         //right: 0;
         //left: 0;
@@ -63,13 +63,13 @@
         transform: translateZ(0);
         -webkit-transform: translateZ(0);
         border-top: $border;
-        border-right: $border;
+        //border-right: $border;
         //border-left: $border;
         z-index: 1000;
 
-        @include desktop {
+        /*@include desktop {
             width: 50vw;
-        }
+        }*/
     }
     
         &__top {
@@ -78,7 +78,7 @@
         align-items: center;
         padding: 1.2rem 2.4rem;
         border-bottom: $border;
-        border-right: $border;
+        //border-right: $border;
 
         @include tablet {
             padding: 1.6rem 4rem;
@@ -90,7 +90,7 @@
         }
     }
 
-    &__holder {
+    /*&__holder {
         margin-top: 4.9rem;
 
         @include tablet {
@@ -100,7 +100,7 @@
         @include desktop {
             margin-top: 6.8rem;
         }
-    }
+    }*/
 
     &__item {
         padding: 2.4rem 1.6rem;
@@ -158,14 +158,14 @@
     }
 
     &__text {
-        padding: 4rem 4rem 9rem 4rem;
+        padding: 4rem;
         @include center;
         flex-direction: column;
     }
 
     &__btn {
         width: 100%;
-        position: fixed;
+        position: sticky;
         bottom: 0;
         z-index: 1000;
 

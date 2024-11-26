@@ -985,6 +985,17 @@ input:-webkit-autofill:active {
   position: relative;
   width: 100%;
   background-color: #FFFFFF;
+  /*&__holder {
+      margin-top: 4.9rem;
+
+      @include tablet {
+          margin-top: 5.7rem;
+      }
+
+      @include desktop {
+          margin-top: 6.8rem;
+      }
+  }*/
 }
 .cart__content {
   border-right: 1px solid #121212;
@@ -1003,6 +1014,7 @@ input:-webkit-autofill:active {
   border-left: 1px solid #121212;
   transition: all 0.3s;
   overflow-y: auto;
+  overflow-x: hidden;
   height: 100svh;
 }
 .cart__wrap::-webkit-scrollbar {
@@ -1024,20 +1036,17 @@ input:-webkit-autofill:active {
   border: none;
 }
 .cart__head {
-  width: 100vw;
-  position: fixed;
+  width: 100%;
+  position: sticky;
   top: 0;
   background-color: #FFFFFF;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
   border-top: 1px solid #121212;
-  border-right: 1px solid #121212;
   z-index: 1000;
-}
-@media screen and (min-width: 1100px) {
-  .cart__head {
-    width: 50vw;
-  }
+  /*@include desktop {
+      width: 50vw;
+  }*/
 }
 .cart__top {
   display: flex;
@@ -1045,7 +1054,6 @@ input:-webkit-autofill:active {
   align-items: center;
   padding: 1.2rem 2.4rem;
   border-bottom: 1px solid #121212;
-  border-right: 1px solid #121212;
 }
 @media screen and (min-width: 768px) {
   .cart__top {
@@ -1056,19 +1064,6 @@ input:-webkit-autofill:active {
   .cart__top {
     padding: 2.16rem 4rem;
     border-right: 1px solid #121212;
-  }
-}
-.cart__holder {
-  margin-top: 4.9rem;
-}
-@media screen and (min-width: 768px) {
-  .cart__holder {
-    margin-top: 5.7rem;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .cart__holder {
-    margin-top: 6.8rem;
   }
 }
 .cart__item {
@@ -1126,7 +1121,7 @@ input:-webkit-autofill:active {
   }
 }
 .cart__text {
-  padding: 4rem 4rem 9rem 4rem;
+  padding: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1134,7 +1129,7 @@ input:-webkit-autofill:active {
 }
 .cart__btn {
   width: 100%;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   z-index: 1000;
 }
