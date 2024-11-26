@@ -999,6 +999,7 @@ input:-webkit-autofill:active {
 }
 .cart__content {
   border-right: 1px solid #121212;
+  height: 100%;
 }
 .cart__contentinvisible {
   display: none;
