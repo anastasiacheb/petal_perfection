@@ -89,6 +89,7 @@ p {
 }
 
 .text-link {
+    color: $black;
     @include medium;
     font-size: 1.4rem;
     line-height: 120%;

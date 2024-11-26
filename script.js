@@ -25,20 +25,25 @@ let cartBtn = document.querySelector(".nav__cart");
 let cart = document.querySelector(".cart__wrap");
 let cartCloseBtn = document.querySelector(".cart__close");
 let cartOverlay = document.querySelector(".cart__overlay");
+let cartHead = document.querySelector(".cart__head");
+
 
 cartBtn.addEventListener("click",() => {
     cart.classList.remove("invisible");
     cartOverlay.classList.remove("invisible");
+    cartHead.style.position = "fixed";
 } )
 
 cartCloseBtn.addEventListener("click",() => {
     cart.classList.add("invisible");
     cartOverlay.classList.add("invisible");
+    cartHead.style.position = "relative";
 } )
 
 cartOverlay.addEventListener("click",() => {
     cart.classList.add("invisible");
     cartOverlay.classList.add("invisible");
+    cartHead.style.position = "relative";
 } )
 
 
