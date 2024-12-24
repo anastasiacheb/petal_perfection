@@ -548,7 +548,7 @@ input:-webkit-autofill:active {
 
 .input {
   border: 1px solid #D2D2D7;
-  border-radius: none;
+  border-radius: 0px;
   -webkit-border-radius: none;
   font-family: "Gilroy", sans-serif;
   font-weight: 500;
@@ -843,6 +843,8 @@ input:-webkit-autofill:active {
 
 .onload {
   transition: all 0.8s;
+  width: 100%;
+  height: 100%;
 }
 
 .onscroll {
