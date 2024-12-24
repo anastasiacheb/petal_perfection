@@ -30,7 +30,7 @@
                         </button>
                     </li>
                     <li class="nav__link nav__link_right"><a href="#">Sign in</a></li>
-                    <li class="nav__link"><a href="index.html">Home</a></li>
+                    <li class="nav__link"><a href="shop.html">Shop</a></li>
                     <li class="nav__link element_mobile"><a href="#">Servise</a></li>
                     <li class="nav__link"><a href="#">Contact</a></li>
                     <li class="nav__link element_mobile"><a href="#" class="text-heading5">About us</a></li>
@@ -73,68 +73,138 @@
             </div>
         </div>
 
-        <header class="header section section_double">
-            <div class="header__head section__column section__column_sticky section_center">
-                <div>
-                    <h2 class="text-heading1 fadeup onload">Choose a Сategory</h2>
-                </div>
+        <section class="header section section_double">
+            <div class="section_bottom section_left section_image">
+                <img src="assets/images/64342f2d3919519714f29d8c_63c1b6fa1622617a936cf208_Nest_NY_LZM_LZM_CC_3WC_RD_BOX_0703_2000x2000_0b628770-f5e1-45b2-8ad5-3257928a110f_720x.webp" alt="woman with flowers">
             </div>
-
-            <div class="header__categories section_double-mob">
-                <div class="card card-category">
-                    <div class="card-category__title">
-                        <h2 class="text-heading3">Fresh Flowers</h2>
+            <div class="product">
+                <div class="product__wrap">
+                    <div>
+                        <p class="text-overline">Aroma Candles / Quick Order</p>
                     </div>
-                    <div class="card-category__link">
-                        <a href="category_fresh-flowers.html" class="link"><span>Shop now</span><img src="assets/icons/arrow-right.svg" alt="arrow right" class="icon"></a>
+                    <div class="product__sec">
+                        <h2 class="text-heading3">Lime & Matcha - $46</h2>
+                        <p class="text-body">Boost your energy and brighten your mood with this scented candle featuring invigorating notes of lime zest, green tea, clary sage, and bergamot.</p>
+                    </div>
+                    <div class="product__sec">
+                        <h2 class="text-subtitle">Quantity</h2>
+                        <div class="qty">
+                            <button class="qty__button minus_btn">
+                                <img src="assets/icons/minus.svg" alt="minus button" class="icon-minus">
+                            </button>
+                            <input type="number" min="1" max="10" value="1" class="qty__feild text-body" id="quantity" name="quantity">
+                            <button class="qty__button plus_btn">
+                                <img src="assets/icons/plus.svg" alt="plus button" class="icon-minus">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product__sec">
+                        <div class="product__title">
+                            <p class="text-body text_gray">Vase Not Included</p>
+                            <h2 class="text-subtitle">Excellent Combination with:</h2>
+                        </div>
+                        <div class="product__slider">
+                            <button>
+                                <img src="assets/icons/chevron-left.svg" alt="chevron left" class="icon_size-l">
+                            </button>
+                            <div class="slider__content">
+                                <div class="slider__wrap">
+                                    <div class="product__comb">
+                                        <img src="assets/images/img.webp" alt="vase" class="product__image">
+                                        <div class="product__disc">
+                                            <p class="text-caption">Glass Vase</p>
+                                            <p class="text-caption">$15</p>
+                                        </div>
+                                    </div>
+                                    <div class="product__comb">
+                                        <img src="assets/images/img(1).webp" alt="vase" class="product__image">
+                                        <div class="product__disc">
+                                            <p class="text-caption">Hammershoi</p>
+                                            <p class="text-caption">$45</p>
+                                        </div>
+                                    </div>
+                                    <div class="product__comb">
+                                        <img src="assets/images/img(2).webp" alt="vase" class="product__image">
+                                        <div class="product__disc">
+                                            <p class="text-caption">Ceramic Vase</p>
+                                            <p class="text-caption">$35</p>
+                                        </div>
+                                    </div>
+                                    <div class="product__comb">
+                                        <img src="assets/images/img(3).webp" alt="vase" class="product__image">
+                                        <div class="product__disc">
+                                            <p class="text-caption">Steel vase</p>
+                                            <p class="text-caption">$25</p>
+                                        </div>
+                                    </div>
+                                    <div class="product__comb">
+                                        <img src="assets/images/img.webp" alt="vase" class="product__image">
+                                        <div class="product__disc">
+                                            <p class="text-caption">Bamboo</p>
+                                            <p class="text-caption">$15</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button>
+                                <img src="assets/icons/chevron-right.svg" alt="chevron right" class="icon_size-l">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product__sec">
+                        <h2 class="text-subtitle">Price options</h2>
+                        <div class="radio">
+                            <input class="radio__button" type="radio" name="option" id="one" checked>
+                            <label class="radio__label text-body" for="one">One time purchase. Price $48</label>
+                        </div>
+                        <div class="radio">
+                            <input class="radio__button" type="radio" name="option" id="subscribe">
+                            <label class="radio__label text-body" for="subscribe">Subscribe now, and save 25% on this order. </label>
+                        </div>
+
                     </div>
                 </div>
-                <a href="category_fresh-flowers.html" class="card card__image">
-                    <div class="zoomin onload">
-                        <img src="assets/images/carditem(1).webp" alt="flowers">
-                    </div>
-                </a>
+                <button class="button button_primary button_add-to-cart">Add to basket</button>
+            </div>
+        </section>
 
-                <a href="category_dried-flowers.html" class="card card__image">
-                    <div class="zoomin onload">
-                        <img src="assets/images/64342f30f2de65b606027726_6409ca152ae09679c61f99b5_Savoy_carousel20copy.webp" alt="flowers">
-                    </div>
-                </a>
-                <div class="card card-category">
-                    <div class="card-category__title">
-                        <h2 class="text-heading3">Dried Flowers</h2>
-                    </div>
-                    <div class="card-category__link">
-                        <a href="category_dried-flowers.html" class="link"><img src="assets/icons/arrow-left.svg" alt="arrow right" class="icon"><span>Shop now</span></a>
-                    </div>
+        <div class="section__column element_center-tab section_centered">
+            <h2 class="text-heading2">You may also like…</h2>
+        </div>
+
+        <div class="footer">
+            <a href="#" class="card card__tab card__image card-prod">
+                <img src="assets/images/card_item_(13).webp" alt="flowers">
+                <div class="card-prod_description">
+                    <p class="text-heading6">Rattan Grapefruit</p>
+                    <p class="text-caption_bold">price 48$</p>
                 </div>
-
-                <div class="card card-category">
-                    <div class="card-category__title">
-                        <h2 class="text-heading3">Live Plants </h2>
-                    </div>
-                    <div class="card-category__link">
-                        <a href="category_Live_Plants.html" class="link"><span>Shop now</span><img src="assets/icons/arrow-right.svg" alt="arrow right" class="icon"></a>
-                    </div>
-                </div>
-                <a href="category_Live_Plants.html" class="card card__image">
-                        <img src="assets/images/card_item_(2).webp" alt="flowers">
-                </a>
-
-                <a href="category_Aroma_Candles.html" class="card card__image">
-                    <img src="assets/images/card_item_(1).webp" alt="flowers">
             </a>
-            <div class="card card-category">
-                <div class="card-category__title">
-                    <h2 class="text-heading3">Aroma Candles</h2>
-                </div>
-                <div class="card-category__link">
-                    <a href="category_Aroma_Candles.html" class="link"><img src="assets/icons/arrow-left.svg" alt="arrow right" class="icon"><span>Shop now</span></a>
-                </div>
-            </div>
-            </div>
 
-        </header>
+            <a href="#" class="card card__tab card__image card-prod">
+                <img src="assets/images/card_item_(14).webp" alt="flowers">
+                <div class="card-prod_description">
+                    <p class="text-heading6">Lime & Matcha</p>
+                    <p class="text-caption_bold">price 48$</p>
+                </div>
+            </a>
+
+            <a href="#" class="card card__tab card__image card-prod">
+                <img src="assets/images/card_item_(15).webp" alt="flowers">
+                <div class="card-prod_description">
+                    <p class="text-heading6">Cedar & Lavender</p>
+                    <p class="text-caption_bold">price 64$</p>
+                </div>
+            </a>
+
+            <a href="#" class="card card__tab card__image card-prod">
+                <img src="assets/images/card_item_(16).webp" alt="flowers">
+                <div class="card-prod_description">
+                    <p class="text-heading6">Ocean Mist</p>
+                    <p class="text-caption_bold">price 58$</p>
+                </div>
+            </a>
+        </div>
 
         <footer class="footer">
             <div class="footer__section">
@@ -199,6 +269,6 @@
                 </ul>
             </div>
         </footer>
-        <script src="script.js"></script>
+        <script src="script.js" type="module"></script>
     </body>
 </html>
