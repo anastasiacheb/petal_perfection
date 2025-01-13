@@ -109,6 +109,22 @@ const getItem = localStorage.getItem;
 localStorage.constructor.prototype.getItem = (key) => getItem.apply(localStorage, ['/' + location.pathname.split("/")[1] + '/' + ':' + key]);
 
 let itemList;
+itemList = [{"imgSrc":"https://anastasiacheb.github.io/petal_perfection/assets/images/card_item_(11).webp",
+    "title":"Blue Harmony",
+    "quantity":"1",
+    "price":"55"},
+    {"imgSrc":"https://anastasiacheb.github.io/petal_perfection/assets/images/64342f30f2de65b606027726_6409ca152ae09679c61f99b5_Savoy_carousel20copy.webp",
+    "title":"The Savoy",
+    "quantity":"1",
+    "price":"55"},
+    {"imgSrc":"https://anastasiacheb.github.io/petal_perfection/assets/images/64342f3025c646a9e1084226_640a148ffced1a5d761ead7a_nestnewyork_wellness_driftwoodchamomile_reeddiffuser_1_720x20copy.webp",
+    "title":"Driftwood",
+    "quantity":"2",
+    "price":"58"},
+    {"imgSrc":"https://anastasiacheb.github.io/petal_perfection/assets/images/64342f3194363fa747f2647b_6408c2888ca916190bf375ca_nestnewyork_wellness_himalayansaltrosewater_candle_3wick_1_720x.webp",
+    "title":"Himalayan Salt &amp; Rosewater",
+    "quantity":"1",
+    "price":"76"}]
 itemList = JSON.parse(localStorage.getItem("itemList"));
 if (itemList == null) {
     let itemList = [];
